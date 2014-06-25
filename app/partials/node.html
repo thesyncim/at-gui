@@ -1,5 +1,16 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+
+
+<h3> Identificador : {{node.Id }}</h3>
+
+        Ultimo Ping  {{node.LastPing | amCalendar}} <br>
+        <br>
+        Serviços
+        <br>
+        <br>
+
+        <div ng-repeat="service in node.Services">
+            Url             : {{service.Url}}<br>
+            Protocolo       : {{service.Req.Protocol}}<br>
+            Nome do Serviço : {{service.Req.Subdomain}}<br>
+            <br>
+        </div>
