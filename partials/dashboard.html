@@ -1,0 +1,14 @@
+<!-- Example row of columns -->
+<input type="search" class="form-control" ng-model="searchQuery" ng-change="search(searchQuery)" placeholder="Search Node">
+
+<div class="row" >
+    <div class="col-md-4" ng-repeat="node in nodes">
+        <h2>{{node.Id}}</h2>
+        <p ng-repeat="service in node.Services">
+            {{service.Url}}
+            {{service.Req.Protocol}}
+            {{service.Req.Subdomain}}
+        </p>
+        <p><a class="btn btn-default" href="#/nodes/{{node.Id}}" role="button">View details &raquo;</a></p>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+
+
+<h3> Identificador : {{node.Id }}</h3>
+
+        Ultimo Ping  {{node.LastPing | amCalendar}} <br>
+        <br>
+        Serviços
+        <br>
+        <br>
+
+        <div ng-repeat="service in node.Services">
+            Url             : {{service.Url}}<br>
+            Protocolo       : {{service.Req.Protocol}}<br>
+            Nome do Serviço : {{service.Req.Subdomain}}<br>
+            <br>
+        </div>
