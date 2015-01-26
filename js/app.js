@@ -15,4 +15,4 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/dashboard', {templateUrl: 'partials/dashboard.html', controller: 'DashboardCtrl'});
   $routeProvider.when('/nodes/:id', {templateUrl: 'partials/node.html', controller: 'NodeInfoCtrl'});
   $routeProvider.otherwise({redirectTo: '/dashboard'});
-}]).value("apiaddr", "http://proxy.euroneves.pt:8080");;
+}]).value("apiaddr", "http://proxy.alpeca3d.com:8081");;
